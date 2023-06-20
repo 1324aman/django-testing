@@ -21,4 +21,4 @@ Coverage.py works in three phases:
 
 - Analysis: Coverage.py examines your code to determine what lines could have run.
 
-- Reporting: Coverage.py combines the results of execution and analysis to produce a coverage number and an indication of missing execution.
+- Reporting: Coverage.py combines the results of execution and analysis to produce a coverage number and an indication of missing execution and generates a report in html, json etc formats.
