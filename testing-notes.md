@@ -24,6 +24,6 @@ Coverage.py works in three phases:
 - Reporting: Coverage.py combines the results of execution and analysis to produce a coverage number and an indication of missing execution and generates a report in html, json etc formats.
 
 ### Note
-If your tests rely on database access such as creating or querying models, be sure to create your test classes as subclasses of django.test.TestCase rather than unittest.TestCase.
+If your tests rely on database access such as creating or querying models, be sure to create your test classes as subclasses of `django.test.TestCase` rather than `unittest.TestCase`.
 
 Using unittest.TestCase avoids the cost of running each test in a transaction and flushing the database, but if your tests interact with the database their behavior will vary based on the order that the test runner executes them. This can lead to unit tests that pass when run in isolation but fail when run in a suite.
