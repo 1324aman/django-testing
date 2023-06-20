@@ -10,3 +10,11 @@
 - If we want to exclude some code from coverage report then add this comment on that line `# pragma: no cover`
 -  Excluded code is executed as usual, and its execution is recorded in the coverage data as usual but not included in report.
 
+### How coverage works
+Coverage.py works in three phases:
+
+- Execution: Coverage.py runs your code, and monitors it to see what lines were executed.
+
+- Analysis: Coverage.py examines your code to determine what lines could have run.
+
+- Reporting: Coverage.py combines the results of execution and analysis to produce a coverage number and an indication of missing execution.
