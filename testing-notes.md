@@ -27,3 +27,16 @@ Coverage.py works in three phases:
 If your tests rely on database access such as creating or querying models, be sure to create your test classes as subclasses of `django.test.TestCase` rather than `unittest.TestCase`.
 
 Using unittest.TestCase avoids the cost of running each test in a transaction and flushing the database, but if your tests interact with the database their behavior will vary based on the order that the test runner executes them. This can lead to unit tests that pass when run in isolation but fail when run in a suite.
+
+### How to run tests in django project
+- #### Run all the tests in the animals.tests module
+- `./manage.py test animals.tests`
+- #### Run all the tests found within the 'animals' app
+- `./manage.py test animals`
+- #### Run just one test case
+- `./manage.py test animals.tests.AnimalTestCase`
+- #### Run just one test method
+- `./manage.py test animals.tests.AnimalTestCase.test_animals_can_speak`
+- #### You can specify a custom filename pattern match using the -p (or --pattern) option, if your test files are named differently from the test*.py pattern
+- `./manage.py test --pattern="tests_*.py"`
+  
