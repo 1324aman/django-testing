@@ -3,6 +3,7 @@
 - a separate test method for each set of conditions you want to test
 - test method names that describe their function
 - integrate coverage tool, to check how much source code has been tested
+- initially we can have tests.py but as our tests grow, we can define test_views.py,test_models.py or test_forms.py etc.
 
 ### coverage, refer this doc [here](https://coverage.readthedocs.io/en/)
 Coverage.py is a tool for measuring code coverage of Python programs. It monitors your program, noting which parts of the code have been executed, then analyzes the source to identify code that could have been executed but was not.
