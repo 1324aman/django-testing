@@ -49,3 +49,7 @@ Using unittest.TestCase avoids the cost of running each test in a transaction an
 #### Speed up the tests execution by running tests in parallel
 - `./manage.py test --parallel=n` where n is the no. of cpu cores that we want to use.
 - we can also mention in settings.py by using this variable `DJANGO_TEST_PROCESSES=n`
+
+#### unittest vs django test
+![image](https://github.com/1324aman/django-testing/assets/68897529/08e33920-ee82-4e82-b0b9-0fa2bc85294e)
+
