@@ -40,4 +40,12 @@ Using unittest.TestCase avoids the cost of running each test in a transaction an
 - `./manage.py test animals.tests.AnimalTestCase.test_animals_can_speak`
 - #### You can specify a custom filename pattern match using the -p (or --pattern) option, if your test files are named differently from the test*.py pattern
 - `./manage.py test --pattern="tests_*.py"`
-  
+
+#### Order of execution of tests
+- All TestCase subclasses are run first.
+- Then, all other Django-based tests (test cases based on SimpleTestCase) are run.
+- Then any other unittest.TestCase tests are run.
+
+#### Speed up the tests execution by running tests in parallel
+- `./manage.py test --parallel=n` where n is the no. of cpu cores that we want to use.
+- we can also mention in settings.py by using this variable `DJANGO_TEST_PROCESSES=n`
